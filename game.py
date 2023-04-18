@@ -19,7 +19,7 @@ clock = pygame.time.Clock()
 
 def main():
     pygame.mixer.music.stop()
-    pygame.mixer.music.load('game_sounds/game.mp3')
+    pygame.mixer.music.load('game_sounds/game.ogg')
     pygame.mixer.music.play(-1)
     animate_screen()
 
@@ -248,7 +248,7 @@ while running:
         enemy2_group.add(enemy2_object)
 
     if score >= 5000 and not boss1_spawned:
-        pygame.mixer.Sound('game_sounds/warning.mp3').play()
+        pygame.mixer.Sound('game_sounds/warning.ogg').play()
         boss1_img = boss1_img
         boss1_object = Boss1(
             random.randint(200, WIDTH - 100),
@@ -259,7 +259,7 @@ while running:
         boss1_spawned = True
     
     if score >= 10000 and not boss2_spawned:
-        pygame.mixer.Sound('game_sounds/warning.mp3').play()
+        pygame.mixer.Sound('game_sounds/warning.ogg').play()
         boss2_img = boss2_img
         boss2_object = Boss2(
             random.randint(200, WIDTH - 100),
@@ -270,7 +270,7 @@ while running:
         boss2_spawned = True
     
     if score >= 15000 and not boss3_spawned:
-        pygame.mixer.Sound('game_sounds/warning.mp3').play()
+        pygame.mixer.Sound('game_sounds/warning.ogg').play()
         boss3_img = boss3_img
         boss3_object = Boss3(
             random.randint(200, WIDTH - 100),

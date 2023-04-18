@@ -16,9 +16,9 @@ class Explosion(pygame.sprite.Sprite):
         self.last_update = pygame.time.get_ticks()
         self.frame_rate = 60
         self.explosion_sounds = [
-            pygame.mixer.Sound('game_sounds/explosions/explosion1.wav'),
-            pygame.mixer.Sound('game_sounds/explosions/explosion2.wav'),
-            pygame.mixer.Sound('game_sounds/explosions/explosion3.wav')
+            pygame.mixer.Sound('game_sounds/explosions/explosion1.ogg'),
+            pygame.mixer.Sound('game_sounds/explosions/explosion2.ogg'),
+            pygame.mixer.Sound('game_sounds/explosions/explosion3.ogg')
         ]
         self.explosion_sound = random.choice(self.explosion_sounds)
         self.sound_played = False
@@ -51,7 +51,7 @@ class Explosion2(pygame.sprite.Sprite):
         self.last_update = pygame.time.get_ticks()
         self.frame_rate = 60
         self.explosion2_sounds = [
-            pygame.mixer.Sound('game_sounds/explosions/explosion3.wav')
+            pygame.mixer.Sound('game_sounds/explosions/explosion3.ogg')
         ]
         self.explosion2_sound = random.choice(self.explosion2_sounds)
         self.sound_played = False
@@ -81,7 +81,7 @@ class Bullet(pygame.sprite.Sprite):
         self.rect.centerx = x
         self.rect.bottom = y - 10
         self.speed = 10
-        self.shoot_sound = pygame.mixer.Sound('game_sounds/shooting/shoot.mp3')
+        self.shoot_sound = pygame.mixer.Sound('game_sounds/shooting/shoot.ogg')
         self.shoot_sound.play()
 
     def update(self):
@@ -102,7 +102,7 @@ class BulletRefill(pygame.sprite.Sprite):
         self.speed = 1
         self.direction_x = random.choice([-2, 2])
         self.direction_y = random.choice([-2, 2])
-        self.sound_effect = pygame.mixer.Sound("game_sounds/refill/bullet_refill.wav")
+        self.sound_effect = pygame.mixer.Sound("game_sounds/refill/bullet_refill.ogg")
 
     def update(self):
         self.rect.y += self.speed * self.direction_y
@@ -130,7 +130,7 @@ class HealthRefill(pygame.sprite.Sprite):
         self.speed = 1
         self.direction_x = random.choice([-2, 2])
         self.direction_y = random.choice([-2, 2])
-        self.sound_effect = pygame.mixer.Sound("game_sounds/refill/health_refill.wav")
+        self.sound_effect = pygame.mixer.Sound("game_sounds/refill/health_refill.ogg")
 
     def update(self):
         self.rect.y += self.speed * self.direction_y
@@ -158,7 +158,7 @@ class DoubleRefill(pygame.sprite.Sprite):
         self.speed = 2
         self.direction_x = random.choice([-2, 2])
         self.direction_y = random.choice([-2, 2])
-        self.sound_effect = pygame.mixer.Sound("game_sounds/refill/double_refill.mp3")
+        self.sound_effect = pygame.mixer.Sound("game_sounds/refill/double_refill.ogg")
 
     def update(self):
         self.rect.y += self.speed * self.direction_y
@@ -190,7 +190,7 @@ class ExtraScore(pygame.sprite.Sprite):
         self.rect.y = y
         self.direction_x = 0
         self.direction_y = 1
-        self.sound_effect = pygame.mixer.Sound("game_sounds/refill/extra_score.mp3")
+        self.sound_effect = pygame.mixer.Sound("game_sounds/refill/extra_score.ogg")
 
     def update(self):
         self.rect.y += self.speed * self.direction_y
@@ -375,7 +375,7 @@ class Enemy2Bullet(pygame.sprite.Sprite):
         self.rect.centerx = x
         self.rect.bottom = y + 10
         self.speed = 8
-        self.shoot_sound = pygame.mixer.Sound('game_sounds/shooting/shoot2.mp3')
+        self.shoot_sound = pygame.mixer.Sound('game_sounds/shooting/shoot2.ogg')
         self.shoot_sound.play()
 
     def update(self):
@@ -398,7 +398,7 @@ class BlackHole(pygame.sprite.Sprite):
         self.direction_y = 1
         self.angle = 0
         self.speed = 2
-        self.sound_effect = pygame.mixer.Sound("game_sounds/damage/black_hole.mp3")
+        self.sound_effect = pygame.mixer.Sound("game_sounds/damage/black_hole.ogg")
 
     def update(self):
         self.rect.y += self.speed * self.direction_y
@@ -578,7 +578,7 @@ class Boss1Bullet(pygame.sprite.Sprite):
         self.rect.centerx = x
         self.rect.bottom = y + 10
         self.speed = 10
-        self.shoot_sound = pygame.mixer.Sound('game_sounds/shooting/boss1shoot.mp3')
+        self.shoot_sound = pygame.mixer.Sound('game_sounds/shooting/boss1shoot.ogg')
         self.shoot_sound.play()
 
     def update(self):
@@ -668,7 +668,7 @@ class Boss2Bullet(pygame.sprite.Sprite):
         self.rect.bottom = y + 10
         self.speed = 11
         self.direction = direction
-        self.shoot_sound = pygame.mixer.Sound('game_sounds/shooting/boss2shoot.mp3')
+        self.shoot_sound = pygame.mixer.Sound('game_sounds/shooting/boss2shoot.ogg')
         self.shoot_sound.play()
 
     def update(self):
@@ -774,7 +774,7 @@ class Boss3Bullet(pygame.sprite.Sprite):
         self.rect.bottom = y + 10
         self.speed = 15
         self.direction = direction
-        self.shoot_sound = pygame.mixer.Sound('game_sounds/shooting/boss2shoot.mp3')
+        self.shoot_sound = pygame.mixer.Sound('game_sounds/shooting/boss2shoot.ogg')
         self.shoot_sound.play()
 
     def update(self):

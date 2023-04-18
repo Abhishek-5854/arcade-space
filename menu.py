@@ -35,9 +35,9 @@ mainmenu_img = pygame.transform.scale(mainmenu_img, (WIDTH, HEIGHT))
 play_button_rect = pygame.Rect(WIDTH // 2 - 100, HEIGHT // 2 - 25, 205, 50)
 quit_button_rect = pygame.Rect(WIDTH // 2 - 100, HEIGHT // 2 + 60, 205, 80)
 
-pygame.mixer.music.load('game_sounds/menu.mp3')
+pygame.mixer.music.load('game_sounds/menu.ogg')
 pygame.mixer.music.play(-1)
-explosion_sound = pygame.mixer.Sound('game_sounds/explosions/explosion1.wav')
+explosion_sound = pygame.mixer.Sound('game_sounds/explosions/explosion1.ogg')
 
 selected_button = 0
 show_menu = True
